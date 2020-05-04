@@ -6,7 +6,6 @@
 //
 
 #include <stdlib.h>
-#include <map>
 #include "CallbackManager.h"
 
 Dart_PostCObjectType dartPostCObject = NULL;
