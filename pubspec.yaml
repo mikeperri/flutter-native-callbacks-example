@@ -1,21 +1,17 @@
 name: native_callbacks_example
-description: A new flutter plugin project.
+description: An example of a Flutter plugin that calls directly into native code and gets an asynchronous callback
 version: 0.0.1
 author:
 homepage:
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.10.0"
+  flutter: ">=1.18.0-8.0.pre"
 
 dependencies:
   flutter:
     sdk: flutter
   isolate: "^2.0.3"
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
