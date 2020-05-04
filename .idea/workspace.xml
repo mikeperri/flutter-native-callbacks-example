@@ -7,17 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12db4348-c7f6-4491-a9f3-857a4069b0e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/Classes/Shared/CallbackManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Classes/Shared/CallbackManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/NativeCallbacksExamplePlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/NativeCallbacksExamplePlugin.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftNativeCallbacksExamplePlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftNativeCallbacksExamplePlugin.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/native_callbacks_example.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/native_callbacks_example.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native_callbacks_example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/native_callbacks_example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +42,12 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/android" />
       <recent name="$PROJECT_DIR$/ios/Shared" />
       <recent name="$PROJECT_DIR$/ios" />
       <recent name="$PROJECT_DIR$/shared/cpp" />
