@@ -9,8 +9,24 @@ The main motivation for this is to call directly into native NDK code on Android
 
 For example, say you were building a music app, and it needs to call Swift on the iOS side and C++ on the Android side for real-time audio operations. You wouldn't want to use PlatformChannels because of the added latency, and also because on Android you don't need to go through the JVM.
 
-## What
-The Flutter plugin has two async methods. First, you need to instantiate `NativeCallbacksExample()`. Then, you can call `methodA()`, which returns a `Future<int>`, and `methodB()`, which returns a `Future<List<String>>`.
+## How
 
-On Android, this will call the CPP files in /android/src/main/cpp/native_callbacks_example.cpp. On iOS, it will call the Swift file at /ios/Classes/SwiftNativeCallbacksExamplePlugin.swift. The shared 'CallbackManager', which holds the reference to Dart_PostCObject, is in /ios/Classes/Shared.
+### Plugin
+The Flutter plugin can be found at lib/native_callbacks_example.dart.
 
+Before doing anything else, you need to call `NativeCallbacksExample.doSetup()`. This gives the native code a reference to Dart_PostCObject, which it will use to send data back to Dart ports.
+
+It has two async methods:
+- `NativeCallbacksExample.methodA()`, which returns a `Future<int>`
+- `NativeCallbacksExample.methodB()`, which returns a `Future<List<String>>`
+
+Internally, the Dart methods use `singleResponseFuture` from the `isolate` library to create a Dart port and pass it to the native side on each function call, then await the next message received by that port.
+
+On Android, these methods will call the CPP files in /android/src/main/cpp/native_callbacks_example.cpp.
+
+On iOS, it will call the Swift file at /ios/Classes/SwiftNativeCallbacksExamplePlugin.swift.
+
+For both platforms, the shared 'CallbackManager' is in /ios/Classes/Shared. It contains some C helpers to call Dart, and it holds the reference to Dart_PostCObject.
+
+### Example app
+The example app can be found at example/lib/main.dart.

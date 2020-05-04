@@ -14,7 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final plugin = NativeCallbacksExample();
   CancelableOperation<int> methodAOperation;
   CancelableOperation<List<String>> methodBOperation;
   int methodAResult;
@@ -23,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    plugin.doSetup();
+    NativeCallbacksExample.doSetup();
     getNativeData();
   }
 
@@ -36,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       methodBResult = null;
     });
 
-    methodAOperation = CancelableOperation.fromFuture(plugin.methodA());
+    methodAOperation = CancelableOperation.fromFuture(NativeCallbacksExample.methodA());
     methodAOperation
       .value
       .then((_methodAResult) {
@@ -45,7 +44,7 @@ class _MyAppState extends State<MyApp> {
         });
       });
 
-    methodBOperation = CancelableOperation.fromFuture(plugin.methodB());
+    methodBOperation = CancelableOperation.fromFuture(NativeCallbacksExample.methodB());
     methodBOperation
       .value
       .then((_methodBResult) {

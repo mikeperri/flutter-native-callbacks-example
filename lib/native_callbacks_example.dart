@@ -22,15 +22,16 @@ final nMethodB = nativeLib
   .lookupFunction<Void Function(Int64), void Function(int)>('method_b');
 
 class NativeCallbacksExample {
-  void doSetup() {
+  // Must be called once, before any other method
+  static void doSetup() {
     nRegisterPostCObject(NativeApi.postCObject);
   }
 
-  Future<int> methodA() async {
+  static Future<int> methodA() async {
     return singleResponseFuture((port) => nMethodA(port.nativePort));
   }
 
-  Future<List<String>> methodB() async {
+  static Future<List<String>> methodB() async {
     final future = singleResponseFuture<List<dynamic>>((port) => nMethodB(port.nativePort));
     return future.then((List<dynamic> list) {
       return list.cast<String>();
