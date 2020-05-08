@@ -22,11 +22,11 @@ It has two async methods:
 
 Internally, the Dart methods use `singleResponseFuture` from the `isolate` library to create a Dart port and pass it to the native side on each function call, then await the next message received by that port.
 
-On Android, these methods will call the CPP files in /android/src/main/cpp/native_callbacks_example.cpp.
+On Android, these methods will call the CPP files in /android/src/main/cpp/native_callbacks_example.cpp. (Note the changes in the C
 
 On iOS, it will call the Swift file at /ios/Classes/SwiftNativeCallbacksExamplePlugin.swift.
 
-For both platforms, the shared 'CallbackManager' is in /ios/Classes/Shared. It contains some C helpers to call Dart, and it holds the reference to Dart_PostCObject.
+For both platforms, the shared 'CallbackManager' is in /ios/Classes/Shared. It contains some C helpers to call Dart, and it holds the reference to Dart_PostCObject. (Note the line in the podspec file that adds a reference to these headers as USER_HEADER_SEARCH_PATHS.)
 
 ### Example app
 The example app can be found at example/lib/main.dart.
